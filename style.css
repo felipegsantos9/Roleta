@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0a0a0c;
+    color: #e8e0d0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 38px;
+    letter-spacing: 3px;
+    color: #d71935;
+}
+
+.subtitle {
+    margin: 12px 0 35px;
+    color: #888;
+    font-size: 14px;
+}
+
+.wheel-container {
+    width: min(500px, 85vw);
+    aspect-ratio: 1;
+    margin: auto;
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #29292e;
+    box-shadow: 0 0 35px #000;
+}
+
+.pointer {
+    position: absolute;
+    z-index: 2;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 35px solid #d71935;
+    filter: drop-shadow(0 3px 4px #000);
+}
+
+button {
+    margin-top: 35px;
+    padding: 16px 45px;
+    background: #d71935;
+    color: white;
+    border: none;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #a80f26;
+    transform: scale(1.04);
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #151518;
+    border: 1px solid #29292e;
+}
+
+.result span {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.result h2 {
+    margin-top: 10px;
+    color: #d71935;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+}
+
+.counter {
+    margin-top: 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .result h2 {
+        font-size: 24px;
+    }
+}
